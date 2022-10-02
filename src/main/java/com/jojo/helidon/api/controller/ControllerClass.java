@@ -1,12 +1,14 @@
 package com.jojo.helidon.api.controller;
 
 import com.jojo.helidon.api.service.ServiceClass;
+
 import io.avaje.http.api.Controller;
 import io.avaje.http.api.Get;
 import io.avaje.http.api.Path;
 import io.avaje.http.api.Post;
 import io.avaje.http.api.Produces;
 import io.helidon.common.http.MediaType;
+import io.helidon.common.reactive.Single;
 import io.helidon.webserver.ServerRequest;
 import io.helidon.webserver.ServerResponse;
 import jakarta.inject.Inject;
@@ -41,9 +43,9 @@ public class ControllerClass {
   }
 
   @Post("/post")
-  RequestModel testPost(RequestModel model) {
+  Single<RequestModel> testPost(RequestModel model) {
 
-    return model;
+    return Single.just(model);
   }
 
   @Get("/health")
