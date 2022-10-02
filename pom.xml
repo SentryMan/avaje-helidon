@@ -17,35 +17,32 @@
 		<avaje.inject.version>8.9</avaje.inject.version>
 		<slf4j.version>2.0.2</slf4j.version>
 		<logback.version>1.4.1</logback.version>
-		<helidon-version>2.3.0</helidon-version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.helidon</groupId>
+				<artifactId>helidon-dependencies</artifactId>
+				<version>3.0.1</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>2.2.2</version>
-		</dependency>
 		<dependency>
 			<groupId>io.helidon.webserver</groupId>
 			<artifactId>helidon-webserver</artifactId>
-			<version>${helidon-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.helidon.health</groupId>
-			<artifactId>helidon-health</artifactId>
-			<version>${helidon-version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>io.helidon.metrics</groupId>
-			<artifactId>helidon-metrics</artifactId>
-			<version>${helidon-version}</version>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<version>2.1.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.helidon.media</groupId>
 			<artifactId>helidon-media-jackson</artifactId>
-			<version>${helidon-version}</version>
 		</dependency>
 
 		<dependency>
@@ -142,7 +139,7 @@
 				<configuration>
 					<argLine>@{argLine} --enable-preview</argLine>
 				</configuration>
-			</plugin> <!--plugintoseewhatjavamodulesweneedfortheJRE-->
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

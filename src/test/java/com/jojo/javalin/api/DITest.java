@@ -8,7 +8,7 @@ import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
 @InjectTest
-class JavalinAPITest {
+class DITest {
   @Inject WebServer server;
 
   @Test

@@ -11,7 +11,13 @@ public class HelidonAPI {
 
     try {
 
-      BeanScope.builder().build().get(WebServer.class).start();
+      BeanScope.builder()
+          .build()
+          .get(WebServer.class)
+          .start()
+          .thenAccept(ws -> log.info("Server started at: http://localhost:" + ws.port()))
+          .toCompletableFuture()
+          .get();
 
     } catch (final Exception e) {
 
