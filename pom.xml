@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>io.avaje</groupId>
 			<artifactId>avaje-http-helidon-generator</artifactId>
-			<version>1.18-SNAPSHOT</version>
+			<version>1.17</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -179,7 +179,7 @@
 						<path>
 							<groupId>io.avaje</groupId>
 							<artifactId>avaje-http-helidon-generator</artifactId>
-							<version>1.18-SNAPSHOT</version>
+							<version>1.17</version>
 						</path>
 						<path>
 							<groupId>io.avaje</groupId>

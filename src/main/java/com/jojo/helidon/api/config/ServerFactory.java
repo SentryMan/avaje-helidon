@@ -1,9 +1,6 @@
 package com.jojo.helidon.api.config;
 
-import java.util.List;
-
 import com.jojo.helidon.api.exception.ErrorAdvice;
-
 import io.avaje.config.Config;
 import io.avaje.inject.Bean;
 import io.avaje.inject.Factory;
@@ -11,6 +8,7 @@ import io.helidon.media.jackson.JacksonSupport;
 import io.helidon.webserver.Routing;
 import io.helidon.webserver.Service;
 import io.helidon.webserver.WebServer;
+import java.util.List;
 
 @Factory
 public class ServerFactory {
